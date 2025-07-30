@@ -4,14 +4,28 @@
 	"description": "Utah Valley Symphony website",
 	"packageManager": "yarn@4.9.2",
 	"scripts": {
-		"build": "npx @11ty/eleventy",
-		"start": "npx @11ty/eleventy --serve",
-		"clean": "rm -rf _site"
+		"build": "eleventy",
+		"start": "eleventy --serve",
+		"clean": "rm -rf _site",
+		"optimize:images": "imagemin images/* --out-dir=images/optimized",
+		"optimize:css": "postcss _includes/*.css --base _includes --dir _site/styles --use cssnano --no-map",
+		"optimize:html": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir _site --output-dir _site --file-ext html",
+		"prebuild": "yarn clean",
+		"postbuild": "yarn optimize:css && yarn optimize:html && yarn optimize:images"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.0"
+		"@11ty/eleventy": "^2.0.0",
+		"cssnano": "^6.0.1",
+		"html-minifier-terser": "^7.2.0",
+		"imagemin": "^8.0.1",
+		"imagemin-mozjpeg": "^10.0.0",
+		"imagemin-pngquant": "^9.0.2",
+		"imagemin-svgo": "^10.0.1",
+		"postcss": "^8.4.21",
+		"postcss-cli": "^10.1.0",
+		"postcss-import": "^15.1.0"
 	}
 }
