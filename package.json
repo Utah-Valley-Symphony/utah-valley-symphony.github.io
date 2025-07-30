@@ -1,16 +1,17 @@
 {
-  "name": "utahvalleysymphony.org",
-  "version": "1.0.0",
-  "description": "Utah Valley Symphony website",
-  "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve",
-    "clean": "rm -rf _site"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.0"
-  }
+	"name": "utahvalleysymphony.org",
+	"version": "1.0.0",
+	"description": "Utah Valley Symphony website",
+	"packageManager": "yarn@4.9.2",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"start": "npx @11ty/eleventy --serve",
+		"clean": "rm -rf _site"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.0"
+	}
 }
