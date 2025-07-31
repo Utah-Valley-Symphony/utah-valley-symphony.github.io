@@ -1,44 +1,18 @@
-html,
-body {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-
-html {
-	--color-dark: #292725;
-	--color-dark-accent: #595755;
-	--color-light: #fcfaf8;
-	--color-light-accent: #f1efed;
-	--color-orange: #c07538;
-	/* --color-orange: #b86932; */
-	--color-yellow: #d1b347;
-	--space-unit: 8px;
-}
-
-body {
-	background-color: var(--color-light);
-	color: var(--color-dark);
-	display: flex;
-	flex-direction: column;
-	font-family: Noto Sans, sans-serif;
-	font-size: 16px;
-	justify-content: center;
-}
-
 .navToggle {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	margin-left: auto;
 	cursor: pointer;
+	background-color: var(--color-orange);
+	padding: var(--base-unit);
+	border-radius: var(--base-unit);
 }
 
 .navToggleIcon {
 	display: inline-block;
 	position: relative;
 	background-clip: content-box;
-	background-color: var(--color-dark);
+	background-color: currentColor;
 	height: 22px;
 	width: 18px;
 	padding: 10px 0 10px 0;
@@ -49,7 +23,7 @@ body {
 .navToggleIcon::after {
 	content: "";
 	position: absolute;
-	background-color: var(--color-dark);
+	background-color: currentColor;
 	height: 2px;
 	width: 100%;
 }
@@ -67,12 +41,12 @@ body {
 }
 
 .navToggleInput:checked ~ .navToggleIcon::before {
-	transform: rotate(45deg) translate(10px, 5px);
+	transform: rotate(45deg) translate(8px, 6px);
 	top: 0;
 }
 
 .navToggleInput:checked ~ .navToggleIcon::after {
-	transform: rotate(-45deg) translate(9px, -4px);
+	transform: rotate(-45deg) translate(8px, -6px);
 	bottom: 0;
 }
 
@@ -104,39 +78,21 @@ body {
 }
 
 .nav {
-	/* background: linear-gradient(#d6d4d2, var(--color-light-accent)); */
-	/* background-image: linear-gradient(
-		var(--color-dark-accent) 4%,
-		var(--color-light) 4%,
-		var(--color-light) 24%,
-		var(--color-dark-accent) 24%,
-		var(--color-dark-accent) 28%,
-		var(--color-light) 28%,
-		var(--color-light) 48%,
-		var(--color-dark-accent) 48%,
-		var(--color-dark-accent) 52%,
-		var(--color-light) 52%,
-		var(--color-light) 72%,
-		var(--color-dark-accent) 72%,
-		var(--color-dark-accent) 76%,
-		var(--color-light) 76%,
-		var(--color-light) 96%,
-		var(--color-dark-accent) 96%,
-		var(--color-dark-accent) 100%
-	); */
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-	padding: var(--space-unit);
+	padding: var(--base-unit);
+	background-color: var(--color-back-accent);
 }
 
 .navSecondary {
 	position: absolute;
-	top: 56px;
+	top: calc(40px + var(--base-unit) * 2);
 	height: 0;
 	width: 100%;
 	overflow: hidden;
 	transition: height 0.25s ease-in-out;
-	background-color: var(--color-orange);
+	background-color: var(--color-back-accent);
 }
 
 .navList {
@@ -155,17 +111,18 @@ body {
 	display: inline-block;
 	max-height: 40px;
 	max-width: 40px;
+	border-radius: 50%;
+	background-color: var(--color-fore);
 }
 
 .main {
-	/* flex parent: body */
-	flex: auto;
-	/* padding ??? */
+	flex: auto; /* flex parent is body element */
 }
 
 .footer {
 	display: flex;
 	justify-content: space-around;
+	background-color: var(--color-back-accent);
 }
 
 @media (min-width: 481px) {

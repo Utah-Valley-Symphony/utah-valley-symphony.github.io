@@ -1,0 +1,33 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	--color-back: #292725;
+	--color-back-accent: #595755;
+	--color-fore: #fcfaf8;
+	--color-fore-accent: #f1efed;
+	--color-orange: #c07538;
+	/* --color-orange: #b86932; */
+	--color-yellow: #d1b347;
+	--base-unit: 4px;
+}
+
+body {
+	background-color: var(--color-back);
+	color: var(--color-fore);
+	display: flex;
+	flex-direction: column;
+	font-family: Noto Sans, sans-serif;
+	font-size: 16px;
+	justify-content: center;
+}
+
+a {
+    /* ?? */
+    /* text-decoration: underline; */
+}
