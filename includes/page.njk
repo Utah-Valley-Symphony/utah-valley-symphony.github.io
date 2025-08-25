@@ -5,14 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title + ' - ' if title }}Utah Valley Symphony</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap">
     <link rel="stylesheet" href="styles.css">
+    {% if styles %}
+    <link rel="stylesheet" href="{{ styles }}">
+    {% endif %}
 </head>
 
 <body>
     <nav class="nav" id="nav">
-        <a class="homeLink" alt="Utah Valley Symphony Logo" href="/"><img src="images/uvs-logo.png" /></a>
+        <a class="homeLink" alt="Utah Valley Symphony Logo" href="/"><img src="/images/logos/uvs-logo.png" /></a>
         <label class="navToggle">
             <input class="navToggleInput" name="toggle navigation menu" type="checkbox" aria-controls="navSecondary" />
             <span class="navToggleIcon"></span>
@@ -23,7 +26,7 @@
     <nav class="navSecondary" id="navSecondary">
         <ul class="navList">
             <li class="navListLogo">
-                <a class="homeLink" alt="Utah Valley Symphony Logo" href="/"><img src="images/uvs-logo.png" /></a>
+                <a class="homeLink" alt="Utah Valley Symphony Logo" href="/"><img src="/images/logos/uvs-logo.png" /></a>
             </li>
             <li class="navListItem"><a href="#">Concerts</a></li>
             <li class="navListItem"><a href="#">Performers</a></li>
@@ -31,13 +34,24 @@
             <li class="navListItem"><a href="#">About</a></li>
         </ul>
     </nav>
+    {% if hero %}{% include hero %}{% endif %}
     <main class="main">
         {{ content | safe }}
     </main>
     <footer class="footer">
-        <p>Copyright</p>
-        <p>CTA</p>
-        <p>Social</p>
+        <ul class="footerSocials">
+            <li><a class="button footerSocial" href="#">
+                <img class="footerSocialImg" src="/images/logos/instagram.svg" />
+            </a></li>
+            <li><a class="button footerSocial" href="#">
+                <img class="footerSocialImg" src="/images/logos/facebook.png" />
+            </a></li>
+            <li><a class="button footerSocial" href="#">
+                <img class="footerSocialImg" src="/images/logos/youtube.png" />
+            </a></li>
+        </ul>
+        <p>Copyright © 2025 Utah Valley Symphony</p>
+        <a href="#">UVS is a 501(c)(3) non-profit organization</a>
     </footer>
 </body>
 

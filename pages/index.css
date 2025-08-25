@@ -1,0 +1,93 @@
+.hero {
+    background-image: url('https://i.pinimg.com/originals/e2/d6/b6/e2d6b6011539dad59fdcbfa0cdc8c529.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 calc(var(--base-unit) * 3) calc(var(--base-unit) * 8);
+    min-height: calc(var(--base-unit) * 50);
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}
+
+.heroText {
+    display: inline-block;
+    border: calc(var(--base-unit) * 3) solid var(--color-yellow);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: calc(var(--base-unit) * 6) calc(var(--base-unit) * 3);
+    text-align: right;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    right: calc(var(--base-unit) * 4);
+    bottom: calc(var(--base-unit) * -3);
+    z-index: 1;
+}
+
+.heroTextEmphasis {
+    display: block;
+    font-style: italic;
+    font-weight: 800;
+}
+
+.homeSection {
+    background-color: var(--color-back);
+    min-height: calc(var(--base-unit) * 30);
+	margin-bottom: calc(var(--base-unit) * 6);
+    padding: calc(var(--base-unit) * 6) calc(var(--base-unit) * 5);
+    position: relative;
+}
+
+.homeSection {
+    --home-section-accent: var(--color-red);
+    --button-background: var(--home-section-accent);
+}
+
+.homeSection:nth-of-type(n + 2) {
+    --home-section-accent: var(--color-green);
+}
+
+.homeSection:nth-of-type(n + 3) {
+    --home-section-accent: var(--color-blue);
+}
+
+.homeSectionImage {
+    border: calc(var(--base-unit) * 3) solid var(--home-section-accent);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    top: calc(var(--base-unit) * 3);
+    left: calc(var(--base-unit) * 5);
+}
+
+.homeSection:nth-of-type(odd) {
+    text-align: right;
+}
+
+.homeSection:nth-of-type(even) .homeSectionImage {
+    left: auto;
+    right: calc(var(--base-unit) * 5);
+}
+
+.homeSectionText {
+    display: inline-block;
+    width: 50%;
+}
+
+.homeSectionDate {
+    margin-top: calc(var(--base-unit) * 2);
+}
+
+.homeSectionButton {
+    margin-top: calc(var(--base-unit) * 2);
+}

@@ -8,12 +8,19 @@ body {
 
 html {
 	--color-back: #292725;
-	--color-back-accent: #595755;
+	--color-back-accent: #494745;
 	--color-fore: #fcfaf8;
 	--color-fore-accent: #f1efed;
-	--color-orange: #c07538;
-	/* --color-orange: #b86932; */
-	--color-yellow: #d1b347;
+	--color-red: #b83a00;
+	--color-red-dark: #7f3214;
+	--color-yellow: #c58f07;
+	--color-green: #526e29;
+	--color-green-dark: #425226;
+	--color-blue: #28667B;
+	--color-blue-dark: #2b4c5b;
+	--color-tan: #ceb99a;
+	--button-background: var(--color-back);
+	--button-foreground: var(--color-fore);
 	--base-unit: 4px;
 }
 
@@ -22,12 +29,39 @@ body {
 	color: var(--color-fore);
 	display: flex;
 	flex-direction: column;
-	font-family: Noto Sans, sans-serif;
+	font-family: Outfit, sans-serif;
 	font-size: 16px;
-	justify-content: center;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Newsreader, serif;
+	font-weight: 700;
+	line-height: 1;
+}
+
+h1 { font-size: calc(1rem + 20px); }
+h2 { font-size: calc(1rem + 16px); }
+h3 { font-size: calc(1rem + 12px); }
+h4 { font-size: calc(1rem + 8px); }
+h5 { font-size: calc(1rem + 4px); }
+h6 { font-size: calc(1rem + 2px); }
 
 a {
     /* ?? */
     /* text-decoration: underline; */
 }
+
+button, .button {
+	background-color: var(--button-background);
+	color: var(--button-foreground);
+    cursor: pointer;
+	/* font-weight: 700; */
+	padding: var(--base-unit) calc(var(--base-unit) * 2);
+}
+
+@media (min-width: 769px) {
+    .hideDesktop {
+		display: none;
+	}
+}
+
