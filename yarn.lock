@@ -11934,7 +11934,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.3.1":
+"react-dom@npm:18.3.1, react-dom@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -12152,7 +12152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.3.1":
+"react@npm:18.3.1, react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
@@ -14511,6 +14511,8 @@ __metadata:
     postcss: "npm:^8.4.21"
     postcss-cli: "npm:^10.1.0"
     postcss-import: "npm:^15.1.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     tinacms: "npm:^2.8.2"
   languageName: unknown
   linkType: soft
