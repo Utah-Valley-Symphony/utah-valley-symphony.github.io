@@ -12543,6 +12543,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"scheduler@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "scheduler@npm:0.26.0"
+  checksum: 10c0/5b8d5bfddaae3513410eda54f2268e98a376a429931921a81b5c3a2873aab7ca4d775a8caac5498f8cbc7d0daeab947cf923dbd8e215d61671f9f4e392d34356
+  languageName: node
+  linkType: hard
+
 "scmp@npm:^2.1.0":
   version: 2.1.0
   resolution: "scmp@npm:2.1.0"
@@ -14540,6 +14547,7 @@ __metadata:
     postcss-import: "npm:^15.1.0"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    scheduler: "npm:^0.26.0"
     slate: "npm:^0.118.1"
     slate-dom: "npm:^0.118.1"
     slate-hyperscript: "npm:^0.100.0"

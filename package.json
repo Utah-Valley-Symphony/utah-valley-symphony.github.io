@@ -33,6 +33,7 @@
 	"dependencies": {
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
+		"scheduler": "^0.26.0",
 		"slate": "^0.118.1",
 		"slate-dom": "^0.118.1",
 		"slate-hyperscript": "^0.100.0",
