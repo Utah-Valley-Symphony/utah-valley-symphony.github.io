@@ -33,6 +33,9 @@
 	"dependencies": {
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
-		"tinacms": "^2.8.2"
+		"slate-hyperscript": "^0.100.0",
+		"slate-react": "^0.117.4",
+		"tinacms": "^2.8.2",
+		"zustand": "^5.0.8"
 	}
 }
