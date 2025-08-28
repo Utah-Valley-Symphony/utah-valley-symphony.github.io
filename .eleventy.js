@@ -3,6 +3,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('pages/**/*.css', {
 		mode: 'html-relative',
 	});
+	eleventyConfig.addPassthroughCopy('pages/admin/assets');
 
 	return {
 		dir: {
