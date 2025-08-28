@@ -16,7 +16,6 @@ export default defineConfig({
 	token: process.env.TINA_TOKEN,
 
 	build: {
-		basePath: 'utahvalleysymphony.org',
 		outputFolder: 'admin',
 		publicFolder: 'pages',
 	},
