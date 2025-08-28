@@ -12962,6 +12962,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"slate-dom@npm:^0.118.1":
+  version: 0.118.1
+  resolution: "slate-dom@npm:0.118.1"
+  dependencies:
+    "@juggle/resize-observer": "npm:^3.4.0"
+    direction: "npm:^1.0.4"
+    is-hotkey: "npm:^0.2.0"
+    is-plain-object: "npm:^5.0.0"
+    lodash: "npm:^4.17.21"
+    scroll-into-view-if-needed: "npm:^3.1.0"
+    tiny-invariant: "npm:1.3.1"
+  peerDependencies:
+    slate: ">=0.99.0"
+  checksum: 10c0/f6cfc02f75d984c437513285bfdeb2c5ea04a9b3152bf10e83d30a0312d41d2666173fbd4e7d756d64cce0da30c8fbf3619d5267bc5d0ea52c6b77505f2c30e6
+  languageName: node
+  linkType: hard
+
 "slate-hyperscript@npm:0.100.0, slate-hyperscript@npm:^0.100.0":
   version: 0.100.0
   resolution: "slate-hyperscript@npm:0.100.0"
@@ -13020,6 +13037,16 @@ __metadata:
     is-plain-object: "npm:^5.0.0"
     tiny-warning: "npm:^1.0.3"
   checksum: 10c0/dd3d75aee5c0da5ddd2da883bc953020781be9e325863881591113ddcdcc14f1f8d0d1bcea0c11ae6c55671dd81d118f6570f7e4070fe4ccc8f84e5e5d51973e
+  languageName: node
+  linkType: hard
+
+"slate@npm:^0.118.1":
+  version: 0.118.1
+  resolution: "slate@npm:0.118.1"
+  dependencies:
+    immer: "npm:^10.0.3"
+    tiny-warning: "npm:^1.0.3"
+  checksum: 10c0/5004e3cb455317755057158d5a9ff9913539d1222135a2012af7ef7788cf330f074d8423d16e5f1899fd77ad2286ec03975cf929f1f8fcf80a24c99d99758a52
   languageName: node
   linkType: hard
 
@@ -14503,6 +14530,8 @@ __metadata:
     postcss-import: "npm:^15.1.0"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    slate: "npm:^0.118.1"
+    slate-dom: "npm:^0.118.1"
     slate-hyperscript: "npm:^0.100.0"
     slate-react: "npm:^0.117.4"
     tinacms: "npm:^2.8.2"
