@@ -10,7 +10,7 @@ _site/
 # Dependencies
 .ntvs_analysis.dat
 node_modules/
-.yarn/install-state.gz
+.yarn/
 
 # Editor directories and files
 # files ending in .cache can be ignored
